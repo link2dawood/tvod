@@ -1,0 +1,3 @@
+import TablePage from "../../../components/TablePage";
+export const metadata = { title: "TVöD SuE-Tabelle 2026–2027 (S-Tabelle)" };
+export default function Page() { return <TablePage title="TVöD SuE-Tabelle 2026–2027" intro="S-Tabelle für den Sozial- und Erziehungsdienst (TVöD VKA). Die meisten Erzieher sind in S 8a oder S 8b eingruppiert — entscheidend sind die übertragenen Tätigkeiten, nicht nur die Ausbildung. Achtung: TV-L SuE hat andere Werte, diese Seite zeigt VKA." tableKey="vkaS" relatedHrefs={["/tvoed/erzieher", "/tvoed-rechner", "/tvoed/jahressonderzahlung-rechner", "/tvoed/eingruppierung", "/tvoed/tvoed-vs-tv-l"]} />; }

@@ -1,0 +1,3 @@
+import TablePage from "../../../components/TablePage";
+export const metadata = { title: "TVöD Pflege-Tabelle 2026–2027 (P-Tabelle)" };
+export default function Page() { return <TablePage title="TVöD Pflege-Tabelle 2026–2027" intro="P-Tabelle für den Pflegedienst (TVöD VKA, Anlage E). P 7 ist die Regelgruppe für Pflegefachkräfte mit 3-jähriger Ausbildung, P 8 u. a. für Praxisanleitung. P 7–P 16 beginnen bei Stufe 2. Zulagen (Pflege-, Schicht-, Nachtzuschläge) kommen ggf. hinzu." tableKey="vkaP" relatedHrefs={["/tvoed/p-7", "/tvoed/pflegefachkraft", "/tvoed-rechner", "/tvoed/jahressonderzahlung-rechner", "/tvoed/stufenlaufzeit"]} />; }
