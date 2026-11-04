@@ -1,4 +1,4 @@
-import { PHASE1, PHASE2 } from "../lib/links";
+import { PHASE1, PHASE2, GENERAL } from "../lib/links";
 
 export function Breadcrumbs({ trail }) {
   // trail: [{label, href?}] — last item is the current page (no link).
@@ -67,7 +67,7 @@ export function GuideShell({ title, intro, validity, crumbs, children, faq, rela
 
 export function HubIndex() {
   const gruppen = ["Rechner", "Tabellen", "Ratgeber", "Gruppen & Berufe"];
-  const phase2Gruppen = ["Gruppen", "Berufe", "Ratgeber"];
+  const phase2Gruppen = ["Gruppen", "Berufe", "Ratgeber", "Rechner"];
   return (
     <div className="card">
       <h2>Alle TVöD-Seiten im Überblick</h2>
@@ -88,6 +88,17 @@ export function HubIndex() {
           <h3>{g}</h3>
           <ul>
             {PHASE2.filter((p) => p.gruppe === g).map((p) => (
+              <li key={p.href}><a href={p.href}>{p.label}</a> — {p.desc}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
+      <h3>Allgemeiner Brutto-Netto-Hub</h3>
+      {["Rechner", "Beträge", "Ratgeber"].map((g) => (
+        <div key={g}>
+          <h3>{g}</h3>
+          <ul>
+            {GENERAL.filter((p) => p.gruppe === g).map((p) => (
               <li key={p.href}><a href={p.href}>{p.label}</a> — {p.desc}</li>
             ))}
           </ul>
